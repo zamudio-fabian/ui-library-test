@@ -1,0 +1,13 @@
+{
+    "name": "demoapp",
+    "version": "0.1.0",
+    "scripts": {
+        "start": "ng serve demoapp",
+        "build": "ng build demoapp",
+        "test": "ng test demoapp",
+        "lint": "ng lint demoapp"
+    },
+    "dependencies": {
+        "ui-library": "^0.1.0"
+    }
+}

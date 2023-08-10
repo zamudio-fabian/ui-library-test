@@ -1,0 +1,61 @@
+{
+  "name": "@zamudio-fabian/storyv2",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "projects/components/*",
+    "storybook"
+  ],
+  "scripts": {
+    "ng": "ng",
+    "bootstrap:component": "hygen component new",
+    "start": "lerna run build --scope=@zamudio-fabian/ui-library --stream && ng run demoapp:storybook",
+    "publish:all": "lerna run build --scope=@zamudio-fabian/ui-library --include-dependencies && lerna publish -y ",
+    "test": "lerna run test --scope=demoapp,ui-library --stream",
+    "storybook": "ng run demoapp:storybook",
+    "build-storybook": "lerna run build --scope=@zamudio-fabian/ui-library --include-dependencies && ng run demoapp:build-storybook",
+    "static": "ng run demoapp:build-storybook && npx http-server storybook-static"
+  },
+  "dependencies": {
+    "@angular/animations": "^16.1.0",
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "esbuild": "^0.19.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.1.7",
+    "@angular/cli": "~16.1.7",
+    "@angular/compiler-cli": "^16.1.0",
+    "@compodoc/compodoc": "^1.1.19",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/angular": "^7.0.6",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/jasmine": "~4.3.0",
+    "eslint-plugin-storybook": "^0.6.12",
+    "hygen": "^6.2.11",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "lerna": "^6.5.1",
+    "ng-packagr": "^16.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.6",
+    "typescript": "~5.1.3"
+  }
+}

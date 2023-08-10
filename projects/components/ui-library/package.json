@@ -1,0 +1,25 @@
+{
+  "name": "@zamudio-fabian/ui-library",
+  "description": "ui library",
+  "version": "1.0.4",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/zamudio-fabian/ui-library.git",
+    "directory": "projects/components/ui-library"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "ng-packagr"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^16.1.0",
+    "@angular/core": "^16.1.0"
+  },
+  "gitHead": "f54e90543034f6d1dce80dc74297a8464b112e6c"
+}
